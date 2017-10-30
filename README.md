@@ -1,24 +1,5 @@
-# README
+https://trello.com/b/AT32Dyy3/2-sided-marketplace-assignment
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://www.figma.com/file/EsaPn73u6FWcCcpfIRtCZAnE/Untitled
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://dbdesigner.net/designer
