@@ -1,8 +1,12 @@
-# JH BI-FI
-
+Criteria
+https://coderacademy.instructure.com/courses/85/assignments/376
 
 Upload multiple photos
 https://github.com/GlennDimaliwat/multi-photo-upload
+
+# JH BI-FI
+
+
 
 ## Heroku Deployment Link
 
