@@ -1,3 +1,11 @@
+Google fonts:
+
+Title Logo:
+Anton
+
+General Font:
+Ubuntu
+
 Criteria
 https://coderacademy.instructure.com/courses/85/assignments/376
 
