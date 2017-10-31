@@ -12,8 +12,18 @@ https://coderacademy.instructure.com/courses/85/assignments/376
 Upload multiple photos
 https://github.com/GlennDimaliwat/multi-photo-upload
 
-# JH BI-FI
+Possible Brand Names:
 
+Elektrek
+Elekdeck
+Elec-tree-city (kinda like Gumtree)
+
+Maybe a God of Thunder/Electricity (thor?)
+Anything do to do with electricity that rhymes with a word similar to store
+
+# JH BI-FI
+(name subject to change)
+What does the bi mean anyway?
 
 
 ## Heroku Deployment Link
