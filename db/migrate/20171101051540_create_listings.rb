@@ -1,7 +1,7 @@
 class CreateListings < ActiveRecord::Migration[5.1]
   def change
     create_table :listings do |t|
-      t.references :user_id, foreign_key: true
+      t.references :user, foreign_key: true
       t.text :title
       t.text :description
       t.date :list_date
