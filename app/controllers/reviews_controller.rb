@@ -26,6 +26,8 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
 
+    @review.user = current_user
+
     respond_to do |format|
       if @review.save
         format.html { redirect_to @review, notice: 'Review was successfully created.' }
@@ -69,6 +71,6 @@ class ReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
-      params.require(:review).permit(:buyer_id_id, :seller_id_id, :rating, :content)
+      params.require(:review).permit(:user_id, :rating, :content)
     end
 end

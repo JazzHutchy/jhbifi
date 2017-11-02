@@ -26,11 +26,6 @@
 </p>
 
 <p>
-  <strong>Charge identifier:</strong>
-  <%= @listing.charge_identifier %>
-</p>
-
-<p>
   <strong>Photos:</strong><br>
   <% @listing.listing_photos.each do |photo| %>
     <%= image_tag photo.photo_url(:thumb) %><br>

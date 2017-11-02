@@ -10,7 +10,6 @@
       <th>Description</th>
       <th>List date</th>
       <th>Price</th>
-      <th>Charge identifier</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,7 +22,6 @@
         <td><%= listing.description %></td>
         <td><%= listing.list_date %></td>
         <td><%= listing.price %></td>
-        <td><%= listing.charge_identifier %></td>
         <td><%= link_to 'Show', listing %></td>
         <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
         <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
