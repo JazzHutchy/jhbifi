@@ -26,9 +26,19 @@ class ProfilesController < ApplicationController
   def create
     @profile = Profile.new(profile_params)
 
+    @profile.user = current_user
+  
     respond_to do |format|
       if @profile.save
-        format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
+  
+        # Get photos directly from the params and save them to the database one by one
+        if params[:profile][:photos]
+          params[:profile][:photos].each { |photo|
+            ProfilePhoto.create!(profile: @profile, photo: photo)
+          }
+        end
+  
+        format.html { redirect_to @profile, notice: 'profile was successfully created.' }
         format.json { render :show, status: :created, location: @profile }
       else
         format.html { render :new }
@@ -42,7 +52,15 @@ class ProfilesController < ApplicationController
   def update
     respond_to do |format|
       if @profile.update(profile_params)
-        format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
+  
+        # Get photos directly from the params and save them to the database one by one
+        if params[:profile][:photos]
+          params[:profile][:photos].each { |photo|
+            ProfilePhoto.create(profile: @profile, photo: photo)
+          }
+        end
+  
+        format.html { redirect_to @profile, notice: 'profile was successfully updated.' }
         format.json { render :show, status: :ok, location: @profile }
       else
         format.html { render :edit }
@@ -50,13 +68,13 @@ class ProfilesController < ApplicationController
       end
     end
   end
-
   # DELETE /profiles/1
   # DELETE /profiles/1.json
   def destroy
-    @profile.destroy
+    @photo.destroy
     respond_to do |format|
-      format.html { redirect_to profiles_url, notice: 'Profile was successfully destroyed.' }
+      # format.html { redirect_to photos_url, notice: 'Photo was successfully destroyed.' }
+      format.html { redirect_to profile_path(@photo.profile_id), notice: 'Photo was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +87,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:user_id_id, :name, :phone_number, :address, :city, :state, :country_code, :avatar)
+      params.require(:profile).permit(:user_id, :name, :phone_number, :address, :city, :state, :country_code, :avatar)
     end
 end

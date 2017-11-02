@@ -12,11 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_id_id %>
-    <%= form.text_field :user_id_id, id: :listing_user_id_id %>
-  </div>
-
-  <div class="field">
     <%= form.label :title %>
     <%= form.text_area :title, id: :listing_title %>
   </div>
@@ -37,8 +32,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :charge_identifier %>
-    <%= form.text_field :charge_identifier, id: :listing_charge_identifier %>
+  <%= form.label :photos %>
+  <%= form.file_field :photos, id: :photos, multiple: true %>
   </div>
 
   <div class="actions">

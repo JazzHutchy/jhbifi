@@ -26,9 +26,19 @@ class ListingsController < ApplicationController
   def create
     @listing = Listing.new(listing_params)
 
+    @listing.user = current_user
+  
     respond_to do |format|
       if @listing.save
-        format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
+  
+        # Get photos directly from the params and save them to the database one by one
+        if params[:listing][:photos]
+          params[:listing][:photos].each { |photo|
+            ListingPhoto.create(listing: @listing, photo: photo)
+          }
+        end
+  
+        format.html { redirect_to @listing, notice: 'listing was successfully created.' }
         format.json { render :show, status: :created, location: @listing }
       else
         format.html { render :new }
@@ -51,12 +61,33 @@ class ListingsController < ApplicationController
     end
   end
 
+  def update
+    respond_to do |format|
+      if @listing.update(listing_params)
+  
+        # Get photos directly from the params and save them to the database one by one
+        if params[:listing][:photos]
+          params[:listing][:photos].each { |photo|
+            ListingPhoto.create(listing: @listing, photo: photo)
+          }
+        end
+  
+        format.html { redirect_to @listing, notice: 'listing was successfully updated.' }
+        format.json { render :show, status: :ok, location: @listing }
+      else
+        format.html { render :edit }
+        format.json { render json: @listing.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   # DELETE /listings/1
   # DELETE /listings/1.json
   def destroy
-    @listing.destroy
+    @photo.destroy
     respond_to do |format|
-      format.html { redirect_to listings_url, notice: 'Listing was successfully destroyed.' }
+      # format.html { redirect_to photos_url, notice: 'Photo was successfully destroyed.' }
+      format.html { redirect_to listing_path(@photo.listing_id), notice: 'Photo was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +100,6 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:user_id_id, :title, :description, :list_date, :price, :charge_identifier)
+      params.require(:listing).permit(:title, :description, :list_date, :price, :charge_identifier)
     end
 end

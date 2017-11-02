@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  resources :profile_photos
+  resources :listing_photos
   resources :favourites
-  resources :photos
   resources :reviews
   resources :messages
   resources :conversations

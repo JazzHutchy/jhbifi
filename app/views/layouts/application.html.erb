@@ -9,13 +9,32 @@
   </head>
 
   <body>
+    <span class="d-flex bg-dark header-footer-text">
+      <p>Home Messages SearchBar Hamburger</p>
+    </span>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+    <span class="d-flex bg-warning">
+      <div class="d-flex">
+      <p>JH BI FI</p>
+      </div>
+
+      <%= link_to 'Sign in', new_user_session_path%>
+      <%= link_to 'Sign up', new_user_registration_path%>
+      <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+
+    </span>
 
     <%= yield %>
-  </body>
 
+    <span class="d-flex bg-dark header-footer-text pt-5">
+      <p>Social Media Icons</p>
+    </span>
+
+    <span class="d-flex bg-dark header-footer-text">
+      <p>JH BI-FI Pty Ltd 2017 ©</p>
+    </span>
+
+  </body>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
