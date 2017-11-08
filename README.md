@@ -55,7 +55,9 @@ Alienware
 http://www.alienware.com.au/
 
 Hamburger Bar
-https://codepen.io/macsupport/pen/bKFzD
+https://codepen.io/petitflodev/pen/ZyPVVo
+
+Thanks Isabelle!
 
 ## Workflow
 
