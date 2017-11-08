@@ -11,17 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
+<section class="text-center">
+
+  <div class="field p-3">
     <%= form.label :rating %>
     <%= form.number_field :rating, id: :review_rating %>
   </div>
 
-  <div class="field">
+  <div class="field p-3">
     <%= form.label :content %>
     <%= form.text_area :content, id: :review_content %>
   </div>
 
-  <div class="actions">
+  <div class="actions p-3">
     <%= form.submit %>
   </div>
+
+</section>
 <% end %>

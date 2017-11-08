@@ -9,9 +9,30 @@
   </head>
 
   <body>
-    <span class="d-flex bg-dark header-footer-text">
-      <p>Home Messages SearchBar Hamburger</p>
+    <span class="d-flex bg-dark header-footer-text pt-3 pb-1">
+      <div class="nav-fixed">
+        <p class="bg-dark">Home Messages SearchBar</p>
+      </div>
     </span>
+
+		<label for="openMenu" id="barMenu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</label>
+		<input type="checkbox" id="openMenu" checked>
+		<nav class="mainMenu">
+			<ul class="menu">
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">PHONES</a></li>
+				<li><a href="#">COMPUTERS</a></li>
+				<li><a href="#">TV/MEDIA</a></li>
+        <li><a href="#">MUSIC</a></li>
+        <li><a href="#">GAMING</a></li>
+				<div class="clear"></div>
+			</ul>		
+		</nav>
+		<div class="content"></div>
 
     <span class="d-flex bg-warning">
       <div class="d-flex">
@@ -26,13 +47,13 @@
 
     <%= yield %>
 
-    <span class="d-flex bg-dark header-footer-text pt-5">
-      <p>Social Media Icons</p>
-    </span>
+      <span class="d-flex bg-dark header-footer-text pt-5 justify-content-center">
+        <p>Social Media Icons</p>
+      </span>
 
-    <span class="d-flex bg-dark header-footer-text">
-      <p>JH BI-FI Pty Ltd 2017 ©</p>
-    </span>
+      <span class="d-flex bg-dark header-footer-text pb-5 justify-content-center">
+        <p>JH BI-FI Pty Ltd 2017 ©</p>
+      </span>
 
   </body>
 

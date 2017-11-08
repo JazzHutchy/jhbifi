@@ -10,6 +10,7 @@ gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'awesome_print'
 gem 'httparty'
 gem 'dotenv'
+gem 'money-rails', '~>1' # unused
 
 # Image Uploading (https://github.com/GlennDimaliwat/multi-photo-upload)
 gem 'fastimage'

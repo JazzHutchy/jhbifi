@@ -1,5 +1,80 @@
 @import "bootstrap";
+@import "listings";
+
 
 .header-footer-text{
   color: white;
+}
+
+// ## Make Nav Bar stay in fixed position ##
+.nav-fixed{
+  position: fixed;
+}
+
+
+// ## Hamburger Bar ##
+body,.menu{
+	margin:0; 
+	padding:0; 	
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+#barMenu{
+	position:fixed; 
+	top:2%; 
+	right:3%; 
+	cursor:pointer;
+	height:30px;
+	width:30px;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+	display:none;
+}
+#barMenu span{
+  border:2px solid; 
+  color: #ffffff;
+}
+input#openMenu{
+	display:none;
+}
+.mainMenu{
+	border-bottom:1px solid #ccc;
+	box-shadow:0 0 3px 5px #ececec;
+}
+.menu{
+	list-style-type:none;
+	width:70%; 
+	margin:auto;	
+}
+.menu li{
+	float:left;	
+	width:21%;
+	text-align:center;
+	padding:2%;
+
+}
+.menu li a{
+	text-decoration:none;
+	color:#000;
+	display:block;
+	padding:2%;	
+}
+.clear{
+	clear:both;
+}
+/*media queries*/
+@media screen and (max-width:700px){
+	#barMenu{
+		display:flex; /*pas display block !!! */
+	}
+	.menu{
+		width:100%;
+	}
+	.menu li{
+		width:100%;
+		padding:0;
+	}
+	input:checked ~ .mainMenu{
+		display:none;
+	}
 }

@@ -11,27 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
+<section class="text-center p-3">
+  <span class="field p-3">
     <%= form.label :title %>
     <%= form.text_area :title, id: :listing_title %>
-  </div>
+  </span>
 
-  <div class="field">
+  <div class="field p-3">
     <%= form.label :description %>
     <%= form.text_area :description, id: :listing_description %>
   </div>
 
-  <div class="field">
+  <div class="field p-3">
     <%= form.label :list_date %>
     <%= form.date_select :list_date, id: :listing_list_date %>
   </div>
 
-  <div class="field">
+  <div class="field p-3">
     <%= form.label :price %>
     <%= form.number_field :price, id: :listing_price %>
   </div>
 
-  <div class="field">
+  <div class="field p-3">
   <%= form.label :photos %>
   <%= form.file_field :photos, id: :photos, multiple: true %>
   </div>
@@ -39,4 +40,5 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+</section>
 <% end %>

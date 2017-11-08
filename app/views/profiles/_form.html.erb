@@ -11,47 +11,48 @@
     </div>
   <% end %>
 
+<section class="container text-center p-3">
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name, id: :profile_name %>
   </div>
 
-  <div class="field">
+  <div class="field p-3">
     <%= form.label :phone_number %>
     <%= form.text_field :phone_number, id: :profile_phone_number %>
   </div>
 
-  <div class="field">
+  <div class="field p-3">
     <%= form.label :address %>
     <%= form.text_area :address, id: :profile_address %>
   </div>
 
-  <div class="field">
+  <div class="field p-3">
     <%= form.label :city %>
     <%= form.text_field :city, id: :profile_city %>
   </div>
 
-  <div class="field">
+  <div class="field p-3">
     <%= form.label :state %>
     <%= form.text_field :state, id: :profile_state %>
   </div>
 
-  <div class="field">
+  <div class="field p-3">
     <%= form.label :country_code %>
     <%= form.text_field :country_code, id: :profile_country_code %>
   </div>
 
-  <div class="field">
+  <div class="field p-3">
     <%= form.label :avatar %>
     <%= form.text_field :avatar, id: :profile_avatar %>
   </div>
 
-  <div class="field">
+  <div class="field p-3">
   <%= form.label :photos %>
   <%= form.file_field :photos, id: :photos, multiple: true %>
 </div>
 
-  <div class="actions">
+  <div class="actions p-3">
     <%= form.submit %>
   </div>
 <% end %>

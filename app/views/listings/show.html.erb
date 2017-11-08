@@ -1,37 +1,95 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @listing.user_id %>
+<div class="title-font">
+  <h1 class="text-center">
+    <%= @listing.title %>
+  </h1>
+</div>
+
+<p class="text-center">
+  <% @listing.listing_photos.each do |photo| %>
+    <%= image_tag photo.photo_url(:thumb) %><br>
+  <% end %>
 </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @listing.title %>
-</p>
+<div class= "container">
+  <div class="d-flex flex-column border">
+    <p>
+      <%= @listing.title %>
+    </p>
 
-<p>
+
+    <p>
+      <strong>Price:</strong>
+      <%= @listing.price %>
+    </p>
+  </div>
+
+  <div class="d-flex flex-column border">
+    <p>
+      <strong>List date:</strong>
+      <%= @listing.list_date %>
+    </p>
+  </div>
+</div>
+
+<p class="container border">
   <strong>Description:</strong>
   <%= @listing.description %>
 </p>
 
-<p>
-  <strong>List date:</strong>
-  <%= @listing.list_date %>
+<p class="text-center">
+  <%= Profile.find(@listing.user_id).name %>
 </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @listing.price %>
+<p class="text-center">
+  Profile Image
 </p>
 
-<p>
-  <strong>Photos:</strong><br>
-  <% @listing.listing_photos.each do |photo| %>
-    <%= image_tag photo.photo_url(:thumb) %><br>
-    <%= link_to 'Delete Photo', listing_photo_path(photo), method: :delete %><br>
-  <% end %>
-</p>
+<div class="text-center">
+  <p class="btn btn-primary">Message Seller</p>
+</div>
 
-<%= link_to 'Edit', edit_listing_path(@listing) %> |
-<%= link_to 'Back', listings_path %>
+<p class="text-center"> Related Items </p>
+  <div class="container">
+    <div class="border row">
+      <div class="col-md-3 border">
+      <p> More Items here </p>
+      </div>
+
+      <div class="col-md-3 border">
+      <p> More Items here </p>
+      </div>
+      
+      <div class="col-md-3 border">
+      <p> More Items here </p>
+      </div>
+
+      <div class="col-md-3 border">
+      <p> More Items here </p>
+      </div>
+    </div>
+</div>
+
+<p class="text-center"> More From This Seller </p>
+  <div class="container">
+    <div class="border row">
+      <div class="col-md-3 border">
+      <p> More Seller Items here </p>
+      </div>
+
+      <div class="col-md-3 border">
+      <p> More Seller Items here </p>
+      </div>
+      
+      <div class="col-md-3 border">
+      <p> More Seller Items here </p>
+      </div>
+
+      <div class="col-md-3 border">
+      <p> More Seller Items here </p>
+      </div>
+    </div>
+</div>
+
+<p><%= link_to 'Back', listings_path %></p>

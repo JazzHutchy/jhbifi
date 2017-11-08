@@ -10,18 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171102054247) do
+ActiveRecord::Schema.define(version: 20171108053455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "conversations", force: :cascade do |t|
-    t.bigint "user_id"
+    t.bigint "buyer_id"
     t.bigint "listing_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "seller_id"
+    t.index ["buyer_id"], name: "index_conversations_on_buyer_id"
     t.index ["listing_id"], name: "index_conversations_on_listing_id"
-    t.index ["user_id"], name: "index_conversations_on_user_id"
   end
 
   create_table "favourites", force: :cascade do |t|
@@ -112,7 +113,7 @@ ActiveRecord::Schema.define(version: 20171102054247) do
   end
 
   add_foreign_key "conversations", "listings"
-  add_foreign_key "conversations", "users"
+  add_foreign_key "conversations", "users", column: "buyer_id"
   add_foreign_key "favourites", "listings"
   add_foreign_key "favourites", "users"
   add_foreign_key "listing_photos", "listings"

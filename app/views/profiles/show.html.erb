@@ -1,52 +1,118 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @profile.user_id %>
-</p>
+<section class="container pt-5">
+  <div class="text-center">
+    <p style="font-size:300%">
+      <strong><%= @profile.name %></strong>
+    </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @profile.name %>
-</p>
+      <div class="row pt-5">
+        <div class="col-md-6">
+        <p>
+        <img alt="Profile Picture">
+          <% @profile.profile_photos.each do |photo| %>
+            <%= image_tag photo.photo_url(:thumb) %><br>
+            <%= link_to 'Delete Photo', profile_photo_path(photo), method: :delete %><br>
+          <% end %>
+        </p>
+        </div>
+  
+        <div class="col-md-6">
+          <p>
+            <strong>City:</strong>
+            <%= @profile.city %>
+          </p>
 
-<p>
-  <strong>Phone number:</strong>
-  <%= @profile.phone_number %>
-</p>
+          <p>
+            <strong>State:</strong>
+            <%= @profile.state %>
+          </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @profile.address %>
-</p>
+          <p>
+            <strong>Country code:</strong>
+            <%= @profile.country_code %>
+          </p>
 
-<p>
-  <strong>City:</strong>
-  <%= @profile.city %>
-</p>
+          <p>
+            <strong>Average User Rating:</strong>
+            
+          </p>
 
-<p>
-  <strong>State:</strong>
-  <%= @profile.state %>
-</p>
+        </div>
+      </div>
+</section>
 
-<p>
-  <strong>Country code:</strong>
-  <%= @profile.country_code %>
-</p>
+<section class="container">
+  <div class="text-center">
+    <h1 class="pt-5">Listings By This User</h1>
+  </div>
 
-<p>
-  <strong>Avatar:</strong>
-  <%= @profile.avatar %>
-</p>
+    <div class="row border">
+      <div class="col-md-4">
+        <p>
+        <img src="https://rukminim1.flixcart.com/image/128/128/j51cbrk0/spin-press-launch-toy/h/r/n/chrome-fidget-spinner-flipzon-original-imaevsk5zhm3ek4y.jpeg?q=70">
+          <% @profile.profile_photos.each do |photo| %>
+            <%= image_tag photo.photo_url(:thumb) %><br>
+            <%= link_to 'Delete Photo', profile_photo_path(photo), method: :delete %><br>
+          <% end %>
+        </p>
+      </div>
+  
+        <div class="col-md-4">
+          <p>
+            <strong>Title:</strong>
+          </p>
 
-<p>
-  <strong>Photos:</strong><br>
-  <% @profile.profile_photos.each do |photo| %>
-    <%= image_tag photo.photo_url(:thumb) %><br>
-    <%= link_to 'Delete Photo', profile_photo_path(photo), method: :delete %><br>
-  <% end %>
-</p>
+          <p>
+            <strong>Price:</strong>
+          </p>
+
+          <p>
+            <strong>Description:</strong>
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <p>
+            <strong>Location:</strong>
+          </p>
+
+          <p>
+            <strong>List Date:</strong>
+          </p>
+        </div>
+      </div>
+</section>
+
+<section class="container">
+  <div class="text-center">
+    <h1 class="pt-5">Reviews</h1>
+    <p>Average User Score -</p>
+  </div>
+
+    <div class="row border">
+      <div class="col-md-4">
+        <p>Username</p>
+        <p>
+        <img alt="Profile Picture">
+          <% @profile.profile_photos.each do |photo| %>
+            <%= image_tag photo.photo_url(:thumb) %><br>
+            <%= link_to 'Delete Photo', profile_photo_path(photo), method: :delete %><br>
+          <% end %>
+        </p>
+      </div>
+  
+        <div class="col-md-8">
+          <p>⭐️</p>
+
+          <p>
+            <strong>Title:</strong>
+          </p>
+
+          <p>#Content#</p>
+        </div>
+      </div>
+</section>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>
