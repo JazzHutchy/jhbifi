@@ -1,29 +1,11 @@
-URL: https://calm-coast-42273.herokuapp.com/
 
 Due Friday 10th
 
-Google fonts:
-
-Title Logo:
-Anton
-
-General Font:
-Ubuntu
 
 Criteria
 https://coderacademy.instructure.com/courses/85/assignments/376
 
-Upload multiple photos
-https://github.com/GlennDimaliwat/multi-photo-upload
 
-Possible Brand Names:
-
-Elektrek
-Elekdeck
-Elec-tree-city (kinda like Gumtree)
-
-Maybe a God of Thunder/Electricity (thor?)
-Anything do to do with electricity that rhymes with a word similar to store
 
 # JH BI-FI
 (name subject to change)
@@ -31,6 +13,7 @@ What does the bi mean anyway?
 
 
 ## Heroku Deployment Link
+URL: https://calm-coast-42273.herokuapp.com/
 
 ## Summary
 ### Problem
@@ -56,10 +39,28 @@ http://www.astrogaming.com/
 Alienware
 http://www.alienware.com.au/
 
+Google fonts:
+Major Headings & Logo - Anton
+General Font - Ubuntu
+
 Hamburger Bar
 https://codepen.io/petitflodev/pen/ZyPVVo
 
 Thanks Isabelle!
+
+Upload multiple photos
+https://github.com/GlennDimaliwat/multi-photo-upload
+
+Cheers Glen!
+
+Possible Brand Names:
+
+Elektrek
+Elekdeck
+Elec-tree-city (kinda like Gumtree)
+
+Maybe a God of Thunder/Electricity (thor?)
+Anything do to do with electricity that rhymes with a word similar to store
 
 ## Workflow
 
