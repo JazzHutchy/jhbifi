@@ -8,7 +8,12 @@
 
       <div class="row pt-5">
         <div class="col-md-6">
-        <p><%= image_tag @profile.profile_photo.photo_url(:thumb) %><br></p>
+          <% if @profile.profile_photo == nil %>
+              <p>No image available</p>
+            <% else %>
+              <%= image_tag @profile.profile_photo.photo_url(:thumb) %>
+          <% end %>
+
         </div>
   
         <div class="col-md-6">
@@ -45,7 +50,11 @@
     <div class="row border">
       <div class="col-md-4">
         <p>
+        <% if @listing_photo == nil %>
+        <p> No photo available </p>
+        <% else %>
           <%= image_tag @listing_photo.photo_url(:thumb) %>
+        <% end %>
         </p>
       </div>
   
@@ -89,7 +98,11 @@
 
           <p>Username</p>
           <p>
-          <%= image_tag @profile.profile_photo.photo_url(:thumb) %>
+          <% if @profile.profile_photo == nil %>
+            <p>No Profile Picture Available</p>
+          <% else %>
+            <%= image_tag @profile.profile_photo.photo_url(:thumb) %>
+          <% end %>
         </p>
       </div>
   
@@ -115,3 +128,12 @@
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>
+
+
+<% if @user_listings == nil %>
+  <p> This user has no listings </p>
+<% else %>
+  <% @user_listings.each do |listing| %>
+    <%= listing %>
+  <% end %>
+<% end %>
