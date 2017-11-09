@@ -1,3 +1,5 @@
+Due Friday 10th
+
 Google fonts:
 
 Title Logo:
@@ -52,35 +54,44 @@ http://www.astrogaming.com/
 Alienware
 http://www.alienware.com.au/
 
+Hamburger Bar
+https://codepen.io/petitflodev/pen/ZyPVVo
+
+Thanks Isabelle!
+
 ## Workflow
 
 ## Wireframes
-
-## ERD
-
-## User Stories
-
-## Project Plan
-
-## Planning Resources
-Trello board
-https://trello.com/b/AT32Dyy3/2-sided-marketplace-assignment
-
 Figma
 https://www.figma.com/file/EsaPn73u6FWcCcpfIRtCZAnE/Untitled
 
+## ERD
 Db Designer
 https://dbdesigner.net/designer/schema/122922
+
+## User Stories
+See trello
+
+## Project Plan
+Trello board
+https://trello.com/b/AT32Dyy3/2-sided-marketplace-assignment
+
+Workflow diagram (need to make one)
 
 ## Gems
 
 
 ## Review
 ### Challenges
+- Greatly overestimated my capabilities to get everything I planned out initially implemented
+- Getting my ERD correct and making sure I have the right models and the right number of them
+- Created some incorrect attributes and had to go through my files and correct them all as I didn't want to restart if I could help it
+- Getting photo uploading to work as intended (had to deal with incorrect attributes)
+- Messaging system gave me many headaches even though I used a tutorial
+- Everything...really
 
 ### Favourite Parts
-
-
+- Bootstrapping everything was the most relaxing part of my assignment, I gained a better understanding of bootstrap from using it in my assignment (such as understanding when to separate bootstrap classes onto appropriate div levels)
 
 ### Questions?
 
