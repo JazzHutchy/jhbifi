@@ -6,7 +6,7 @@
   </h1>
 </div>
 
-<p class="text-left">
+<p class="text-center">
   <% @listing.listing_photos.each do |photo| %>
     <%= image_tag photo.photo_url(:thumb) %><br>
   <% end %>
@@ -15,7 +15,7 @@
 <div class= "container">
   <div class="d-flex flex-column border">
     <p>
-      <%= @listing.title %>
+      <strong><%= @listing.title %></strong>
     </p>
 
     <p>
@@ -38,60 +38,57 @@
 </p>
 
 <p class="text-center">
-  <%= @listing.user.profile.name %>
+  <strong><%= @listing.user.profile.name %></strong>
 </p>
 
 <p class="text-center">
   <%=image_tag(@listing.user.profile.profile_photo.photo_url(:thumb)) unless @listing.user.profile.profile_photo.nil? %>
 </p>
 
-<%#  %>
-
-
 
 <div class="text-center">
-    <%= link_to 'Message me!', conversations_path(buyer_id: current_user.id, listing_id: @listing.id), method: 'post' %>
+    <%= link_to 'Message me!', conversations_path(buyer_id: current_user.id, listing_id: @listing.id), method: 'post', class: 'btn btn-success mt-3 mb-3' %>
 
 </div>
 
-<p class="text-center"> Related Items </p>
+<p class="text-center mt-3 mb-3"><strong>Related Items</strong></p>
   <div class="container">
     <div class="border row">
       <div class="col-md-3 border">
-      <p> More Items here </p>
+      <img src="http://www.gizmocrazed.com/wp-content/uploads/2011/12/MacBook-Pro.jpg" width='150' height='150'>
       </div>
 
       <div class="col-md-3 border">
-      <p> More Items here </p>
+      <img src="https://images.homedepot-static.com/productImages/3aa31a2a-e915-4cb3-b4db-5c200df1d5b7/svn/samsung-flat-screen-tvs-un49mu7500fxza-64_400_compressed.jpg" width='150' height='150'>
       </div>
       
       <div class="col-md-3 border">
-      <p> More Items here </p>
+      <img src="https://www.jbhifi.com.au/FileLibrary/ProductResources/Images/189001-L-LO.jpg" width='150' height='150'>
       </div>
 
       <div class="col-md-3 border">
-      <p> More Items here </p>
+      <img src="https://images-na.ssl-images-amazon.com/images/I/41LKbGQ%2B7bL.jpg" width='150' height='150'>
       </div>
     </div>
 </div>
 
-<p class="text-center"> More From This Seller </p>
+<p class="text-center mt-3 mb-3"> <strong>More From This Seller</strong></p>
   <div class="container">
     <div class="border row">
       <div class="col-md-3 border">
-      <p> More Seller Items here </p>
+      <img src="https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_300x300/INJBT450BK_jbl_wireless_on_ear_headphones_black_t450bt.jpg" width='150' height='150'>
       </div>
 
       <div class="col-md-3 border">
-      <p> More Seller Items here </p>
+      <img src="https://www.belfieldmusic.com.au/media/catalog/product/n/a/native_instruments_s2_mk2_ni_integrated_dj_set_kit_system.jpg" width='150' height='150'>
       </div>
       
       <div class="col-md-3 border">
-      <p> More Seller Items here </p>
+      <img src="https://i5.walmartimages.com/asr/3ad45896-4a67-4a78-9262-03fed10a8e33_1.eb5085c1c65e3280dc6eb90354810cb4.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF" width='150' height='150'>
       </div>
 
       <div class="col-md-3 border">
-      <p> More Seller Items here </p>
+      <img src="http://c8.alamy.com/comp/BBJ682/stack-of-dvds-on-white-BBJ682.jpg" width='150' height='150'>
       </div>
     </div>
 </div>

@@ -20,7 +20,8 @@
   <div class="ui list">
    <% @conversations.each do |conversation| %>
      <div class="item">
-   <%= @user.email %> <%= link_to 'Message me!', conversation, method: 'post'%>
+     <% recipient = User.find(conversation.listing_id) %>
+      <%= recipient.email %> <%= link_to 'Message me!', conversation, method: 'post'%>
  </div>
   <% end %>
  </div>
