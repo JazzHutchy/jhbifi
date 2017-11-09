@@ -10,17 +10,17 @@
 
   <body>
 
-  <ul class="nav bg-dark header-footer-text pt-3 pb-1">
-    <li class="nav-item">
-      <a class="nav-link active" href="#">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Messages</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">SearchBar</a>
-    </li>
-  </ul>
+    <ul class="nav bg-dark header-footer-text pt-3 pb-1">
+      <li class="nav-item">
+        <a class="nav-link active" href="/">Main Page</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/conversations">Messages</a>
+      </li>
+      <li class="nav-item">
+        <input type="text" placeholder="🔍 Search">
+      </li>
+    </ul>
 
 		<label for="openMenu" id="barMenu">
 			<span></span>
@@ -30,15 +30,14 @@
 		<input type="checkbox" id="openMenu" checked>
 		<nav class="mainMenu">
 			<ul class="menu">
-				<li><a href="#">HOME</a></li>
-				<li><a href="#">PHONES</a></li>
-				<li><a href="#">COMPUTERS</a></li>
-				<li><a href="#">TV/MEDIA</a></li>
-        <li><a href="#">MUSIC</a></li>
-        <li><a href="#">GAMING</a></li>
+				<li><a href="/listings">LISTINGS</a></li>
+				<li><a href="/profiles">PROFILES</a></li>
+				<li><a href="/conversations">MESSAGES</a></li>
+        <li><a href="/support">SUPPORT</a></li>
 				<div class="clear"></div>
 			</ul>		
 		</nav>
+
 		<div class="content"></div>
 
     <span class="d-flex justify-content-between pt-3 pb-3 mid-top-background">
@@ -48,8 +47,8 @@
     </div>
 
     <div class="d-flex">
-        <%= link_to 'Sign in', new_user_session_path, class: 'btn btn-primary'%>
-        <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary'%>
+        <%= link_to 'Sign in', new_user_session_path, class: 'btn btn-dark'%>
+        <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-dark'%>
         <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'btn btn-danger'%>
     </div>
 

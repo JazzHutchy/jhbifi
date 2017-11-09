@@ -6,7 +6,7 @@
   </h1>
 </div>
 
-<p class="text-center">
+<p class="text-left">
   <% @listing.listing_photos.each do |photo| %>
     <%= image_tag photo.photo_url(:thumb) %><br>
   <% end %>

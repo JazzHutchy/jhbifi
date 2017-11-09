@@ -77,7 +77,12 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.3)
+    domain_name (0.5.20170404)
+      unf (>= 0.0.5, < 1.0.0)
     dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     down (4.1.1)
     erubi (1.7.0)
     execjs (2.7.0)
@@ -85,6 +90,8 @@ GEM
     ffi (1.9.18)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
     httparty (0.15.6)
       multi_xml (>= 0.5.2)
     i18n (0.8.6)
@@ -101,7 +108,12 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
+    mailgun-ruby (1.1.8)
+      rest-client (~> 2.0)
     method_source (0.9.0)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
     mini_magick (4.8.0)
     mini_mime (0.1.4)
     mini_portile2 (2.3.0)
@@ -117,6 +129,7 @@ GEM
       railties (>= 3.0)
     multi_json (1.12.2)
     multi_xml (0.6.0)
+    netrc (0.11.0)
     nio4r (2.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
@@ -158,6 +171,10 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    rest-client (2.0.2)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     rspec-core (3.7.0)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
@@ -215,6 +232,9 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.4)
     warden (1.2.7)
       rack (>= 1.0)
     web-console (3.5.1)
@@ -238,12 +258,13 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   devise
-  dotenv
+  dotenv-rails
   fastimage
   httparty
   image_processing
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  mailgun-ruby (~> 1.1.6)
   mini_magick
   money-rails (~> 1)
   pg (~> 0.18)
