@@ -25,7 +25,7 @@
     <span class="d-flex justify-content-between pt-3 pb-3 mid-top-background">
 
       <div class="d-flex">
-        <strong><h1 class="pl-3">JH BI FI</h1></strong>
+        <strong><h1 class="pl-3">JH BI-FI</h1></strong>
       </div>
 
       <div class="d-flex">
@@ -67,6 +67,8 @@
       <% elsif alert %>
         <div class="text-center container-fluid py-1"><%= alert %></div>
       <% end %>
+
+      <p>Signed in as <%= current_user.profile.name %></p>
 
     <%= yield %>
 
