@@ -9,11 +9,18 @@
   </head>
 
   <body>
-    <span class="d-flex bg-dark header-footer-text pt-3 pb-1">
-      <div class="nav-fixed">
-        <p class="bg-dark">Home Messages SearchBar</p>
-      </div>
-    </span>
+
+  <ul class="nav bg-dark header-footer-text pt-3 pb-1">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Messages</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">SearchBar</a>
+    </li>
+  </ul>
 
 		<label for="openMenu" id="barMenu">
 			<span></span>
@@ -34,16 +41,28 @@
 		</nav>
 		<div class="content"></div>
 
-    <span class="d-flex bg-warning">
-      <div class="d-flex">
-      <p>JH BI FI</p>
-      </div>
+    <span class="d-flex justify-content-between pt-3 pb-3 mid-top-background">
 
-      <%= link_to 'Sign in', new_user_session_path%>
-      <%= link_to 'Sign up', new_user_registration_path%>
-      <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+    <div class="d-flex">
+      <strong><h2 class="pl-3" style="">JH BI FI</h2></strong>
+    </div>
+
+    <div class="d-flex">
+        <%= link_to 'Sign in', new_user_session_path, class: 'btn btn-primary'%>
+        <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary'%>
+        <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'btn btn-danger'%>
+    </div>
 
     </span>
+    
+    <% if notice && alert %>
+        <div class="text-center container-fluid py-1"><%= notice %></div>
+        <div class="text-center container-fluid py-1"><%= alert %></div>
+      <% elsif notice %>
+        <div class="text-center container-fluid py-1"><%= notice %></div>
+      <% elsif alert %>
+        <div class="text-center container-fluid py-1"><%= alert %></div>
+      <% end %>
 
     <%= yield %>
 
@@ -57,7 +76,6 @@
 
   </body>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  
 
 </html>

@@ -15,6 +15,7 @@ class ReviewsController < ApplicationController
   # GET /reviews/new
   def new
     @review = Review.new
+    @reviewee_id = params['reviewee_id']
   end
 
   # GET /reviews/1/edit
@@ -26,7 +27,8 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
 
-    @review.user = current_user
+    @reviewee_id = params['reviewee_id']
+    @review.user = User.find(@reviewee_id)
 
     respond_to do |format|
       if @review.save

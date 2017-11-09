@@ -8,13 +8,7 @@
 
       <div class="row pt-5">
         <div class="col-md-6">
-        <p>
-        <img alt="Profile Picture">
-          <% @profile.profile_photos.each do |photo| %>
-            <%= image_tag photo.photo_url(:thumb) %><br>
-            <%= link_to 'Delete Photo', profile_photo_path(photo), method: :delete %><br>
-          <% end %>
-        </p>
+        <p><%= image_tag @profile.profile_photo.photo_url(:thumb) %><br></p>
         </div>
   
         <div class="col-md-6">
@@ -47,28 +41,25 @@
     <h1 class="pt-5">Listings By This User</h1>
   </div>
 
+<% @listings.each do |listing| %>
     <div class="row border">
       <div class="col-md-4">
         <p>
-        <img src="https://rukminim1.flixcart.com/image/128/128/j51cbrk0/spin-press-launch-toy/h/r/n/chrome-fidget-spinner-flipzon-original-imaevsk5zhm3ek4y.jpeg?q=70">
-          <% @profile.profile_photos.each do |photo| %>
-            <%= image_tag photo.photo_url(:thumb) %><br>
-            <%= link_to 'Delete Photo', profile_photo_path(photo), method: :delete %><br>
-          <% end %>
+          <%= image_tag @listing_photo.photo_url(:thumb) %>
         </p>
       </div>
   
         <div class="col-md-4">
           <p>
-            <strong>Title:</strong>
+            <strong>Title:  </strong><%= listing.title %>
           </p>
 
           <p>
-            <strong>Price:</strong>
+            <strong>Price: </strong><%= listing.price %>
           </p>
 
           <p>
-            <strong>Description:</strong>
+            <strong>Description: </strong><%= listing.description %>
           </p>
         </div>
 
@@ -82,6 +73,7 @@
           </p>
         </div>
       </div>
+    <% end %>
 </section>
 
 <section class="container">
@@ -92,26 +84,33 @@
 
     <div class="row border">
       <div class="col-md-4">
-        <p>Username</p>
-        <p>
-        <img alt="Profile Picture">
-          <% @profile.profile_photos.each do |photo| %>
-            <%= image_tag photo.photo_url(:thumb) %><br>
-            <%= link_to 'Delete Photo', profile_photo_path(photo), method: :delete %><br>
-          <% end %>
+         <% @reviews.each do |review| %>
+          <%= review.user.profile.name %>
+
+          <p>Username</p>
+          <p>
+          <%= image_tag @profile.profile_photo.photo_url(:thumb) %>
         </p>
       </div>
   
-        <div class="col-md-8">
-          <p>⭐️</p>
+      <div class="col-md-8">
+          <p>⭐️ <%= review.rating %></p>
 
           <p>
-            <strong>Title:</strong>
+            <%= review.content %>
           </p>
 
-          <p>#Content#</p>
-        </div>
+          <% end %>
       </div>
+    </div>
+
+    <br>
+  
+  <a class="btn btn-primary" href="/reviews/new?reviewee_id=<%= @profile.id %>">Review User</a>
+    <%#= link_to 'Review User', new_review_path(), class: 'btn btn-primary' %>
+
+    <br>
+
 </section>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |

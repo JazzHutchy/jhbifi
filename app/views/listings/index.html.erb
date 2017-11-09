@@ -9,7 +9,11 @@
       <div class="container">
         <div class="row border">
           <div class="col-md-3 border">
-            <p><img src="https://rukminim1.flixcart.com/image/704/704/j51cbrk0/spin-press-launch-toy/h/r/n/chrome-fidget-spinner-flipzon-original-imaevsk5zhm3ek4y.jpeg?q=70" alt="image" style="width:150px;height:150px;"></p>
+
+            <% listing.listing_photos.each do |listing_photo|%>
+              <%= image_tag listing_photo.photo_url(:thumb)%>
+            <% end %>
+
           </div>
           <div class="col-md-6">
             <p><%= listing.title %></p>
@@ -19,15 +23,13 @@
           </div>
           <div class="col-md-3">
             <p><%= Profile.find(listing.user_id).city%>, <%= Profile.find(listing.user_id).state%>, <%= Profile.find(listing.user_id).country_code%>
-            <p>Listed: <%= listing.list_date %></p>
+            <strong><p>Listed on: </strong><%= listing.list_date %></p>
           </div>
         </div>
       </div>
     <% end %>
   </tbody>
 </table>
-
-<a><img src="/Users/jaredhutchinson/coderacademy/apps/rails/jhbifi/app/assets/images/fidget_spinner.gif" alt="fidget spinner" style="width:30px;height:30px;"></a>
 
 <br>
 

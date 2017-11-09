@@ -10,6 +10,11 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
+    # byebug
+    @listings = Listing.where(id: @profile.id)
+    @listing_photo = ListingPhoto.find(@profile.id)
+    @reviews = Review.where(user_id: @profile.user.id)
+
   end
 
   # GET /profiles/new
