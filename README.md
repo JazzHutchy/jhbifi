@@ -62,13 +62,17 @@ Elec-tree-city (kinda like Gumtree)
 Figma
 https://www.figma.com/file/EsaPn73u6FWcCcpfIRtCZAnE/Untitled
 
-![Figma 1]()
+![Figma 1](https://github.com/JazzHutchy/jhbifi/blob/master/app/assets/images/important-docs/figma-1.png)
+![Figma 2](https://github.com/JazzHutchy/jhbifi/blob/master/app/assets/images/important-docs/figma-2.png)
+![Figma 3](https://github.com/JazzHutchy/jhbifi/blob/master/app/assets/images/important-docs/figma-3.png)
+![Figma 3.5](https://github.com/JazzHutchy/jhbifi/blob/master/app/assets/images/important-docs/figma-3.5.png)
+![Figma 4](https://github.com/JazzHutchy/jhbifi/blob/master/app/assets/images/important-docs/figma-4.png)
 
 ## ERD
 Db Designer
 https://dbdesigner.net/designer/schema/122922
 
-![]()
+![ERD](https://github.com/JazzHutchy/jhbifi/blob/master/app/assets/images/important-docs/erd-diagram.png)
 
 ## User Stories
 # Buyer
