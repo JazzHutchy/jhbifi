@@ -53,10 +53,9 @@ Cheers Glen!
 
 ### Possible Brand Name Ideas (decided against them in the end):
 
-Elektrek
-Elekdeck
-Elec-tree-city (kinda like Gumtree)
-
+- Elektrek
+- Elekdeck
+- Elec-tree-city (kinda like Gumtree)
 - Maybe a God of Thunder/Electricity (thor?)
 - Anything do to do with electricity that rhymes with a word similar to store
 
