@@ -127,7 +127,7 @@ https://trello.com/b/AT32Dyy3/2-sided-marketplace-assignment
 
 ## Review
 ### Challenges
-- Greatly overestimated my capabilities to get everything I planned out initially implemented
+- Overestimated my capabilities to get everything I planned out initially implemented
 - Getting my ERD correct and making sure I have the right models and the right number of them
 - Created some incorrect attributes and had to go through my files and correct them all as I didn't want to restart if I could help it
 - Getting photo uploading to work as intended (had to deal with incorrect attributes)
