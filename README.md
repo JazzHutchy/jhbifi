@@ -35,16 +35,16 @@ http://www.alienware.com.au/
 
 
 ## Formatting and Miscellaneous Resources
-### Google fonts:
+### Google fonts
 Major Headings & Logo - Anton
 General Font - Ubuntu
 
-### Hamburger Bar -
+### Hamburger Bar
 https://codepen.io/petitflodev/pen/ZyPVVo
 
 Thanks Isabelle!
 
-### Upload multiple photos -
+### Upload multiple photos
 https://github.com/GlennDimaliwat/multi-photo-upload
 
 Cheers Glen!
