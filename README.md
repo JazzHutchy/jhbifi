@@ -18,20 +18,22 @@ A 2-sided marketplace with similarity to Gumtree as a medium to make purchases a
 - Small-time electronics business owners looking to advertise their goods
 
 ## Inspiration
-Electronics store templates for inspiration
+Electronics store templates for inspiration:
+
 https://www.templatemonster.com/category/electronics-store-templates/
+- There are many electronics products sites that use a black, white and green colour scheme.
 
-- There are many electronics products sites that use
-- I like the layout for many gaming products websites, I think they look sleek and the general colour schemes appeal to me.
-
-Razer -
+Razer
 https://www2.razerzone.com/au-en
 
-Astro -
+Astro
 http://www.astrogaming.com/
 
-Alienware -
+Alienware
 http://www.alienware.com.au/
+
+- I like the layout for many gaming products websites, I think they look sleek and the general colour schemes appeal to me.
+
 
 
 ## Formatting and Miscellaneous Resources
