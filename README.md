@@ -63,27 +63,27 @@ Cheers Glen!
 Figma
 https://www.figma.com/file/EsaPn73u6FWcCcpfIRtCZAnE/Untitled
 
-Main Page & Sign Up
+### Main Page & Sign Up
 
 
 ![Figma 1](https://github.com/JazzHutchy/jhbifi/blob/master/app/assets/images/important-docs/figma-1.png)
 
-Profile
+### Profile
 
 
 ![Figma 2](https://github.com/JazzHutchy/jhbifi/blob/master/app/assets/images/important-docs/figma-2.png)
 
-Listings
+### Listings
 
 
 ![Figma 3](https://github.com/JazzHutchy/jhbifi/blob/master/app/assets/images/important-docs/figma-3.png)
 
-More Listings
+### More Listings
 
 
 ![Figma 3.5](https://github.com/JazzHutchy/jhbifi/blob/master/app/assets/images/important-docs/figma-3.5.png)
 
-Miscellaneous
+### Miscellaneous
 
 
 ![Figma 4](https://github.com/JazzHutchy/jhbifi/blob/master/app/assets/images/important-docs/figma-4.png)
