@@ -18,36 +18,38 @@ A 2-sided marketplace with similarity to Gumtree as a medium to make purchases a
 - Small-time electronics business owners looking to advertise their goods
 
 ## Inspiration
-Electronics store templates for inspiration (lots use white and black with their colour palette)
+Electronics store templates for inspiration
 https://www.templatemonster.com/category/electronics-store-templates/
 
-- There are many electronics products sites that use 
+- There are many electronics products sites that use
 - I like the layout for many gaming products websites, I think they look sleek and the general colour schemes appeal to me.
 
-Razer
+Razer -
 https://www2.razerzone.com/au-en
 
-Astro
+Astro -
 http://www.astrogaming.com/
 
-Alienware
+Alienware -
 http://www.alienware.com.au/
 
-Google fonts:
+
+## Formatting and Miscellaneous Resources
+### Google fonts:
 Major Headings & Logo - Anton
 General Font - Ubuntu
 
-Hamburger Bar
+### Hamburger Bar -
 https://codepen.io/petitflodev/pen/ZyPVVo
 
 Thanks Isabelle!
 
-Upload multiple photos
+### Upload multiple photos -
 https://github.com/GlennDimaliwat/multi-photo-upload
 
 Cheers Glen!
 
-### Possible Brand Name Ideas (decided against them in the end:
+### Possible Brand Name Ideas (decided against them in the end):
 
 Elektrek
 Elekdeck
@@ -56,15 +58,17 @@ Elec-tree-city (kinda like Gumtree)
 - Maybe a God of Thunder/Electricity (thor?)
 - Anything do to do with electricity that rhymes with a word similar to store
 
-## Workflow
-
 ## Wireframes
 Figma
 https://www.figma.com/file/EsaPn73u6FWcCcpfIRtCZAnE/Untitled
 
+![Figma 1]()
+
 ## ERD
 Db Designer
 https://dbdesigner.net/designer/schema/122922
+
+![]()
 
 ## User Stories
 # Buyer
@@ -136,6 +140,4 @@ https://trello.com/b/AT32Dyy3/2-sided-marketplace-assignment
 ### Favourite Parts
 - The initial planning phase in Figma went very smoothly for the most part
 - Bootstrapping everything was the most relaxing part of my assignment, I gained a better understanding of bootstrap from using it in my assignment (such as understanding when to separate bootstrap classes onto appropriate div levels)
-
-### Questions?
 
